@@ -7,7 +7,7 @@
 	CDVInvokedUrlCommand* commandBack;
 }
 
-- (void)loadURL:(CDVInvokedUrlCommand *)command;
+- (void)join:(CDVInvokedUrlCommand *)command;
 - (void)destroy:(CDVInvokedUrlCommand *)command;
 - (void)backButtonPressed:(CDVInvokedUrlCommand *)command; 
 - (void)conferenceFailed:(NSDictionary *)data;
