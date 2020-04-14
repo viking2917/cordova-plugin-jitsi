@@ -2,15 +2,16 @@
 Cordova plugin for Jitsi Meet React Native SDK. Works with both iOS and Android, and fixes the 64-bit binary dependency issue with Android found in previous versions of this plugin.
 
 # Summary 
-I created this repo as there were multiple versions of this plugin, one which worked for iOS and Android, but neither worked with both. This verison satisfies the 64bit requirement for Android and also works in iOS and is currently being used in production.
+This is based on the repo by findmate, but I updated the JitsiMeet SDK and WebRTC framework to the latest version, to get all features working in a Cordova app.
+It is based on the repo by findmate: https://github.com/findmate/cordova-plugin-jitsi-meet
 
 # Installation
-`cordova plugin add https://github.com/findmate/cordova-plugin-jitsi-meet`
+`cordova plugin add https://github.com/cremfert/cordova-plugin-jitsi-meet`
 
 ## iOS Installation
 On iOS/Xcode you will need to manually specify the WebRTC and JitsiMeet frameworks manually to be embedded.
 
-Example of how to select them here: https://github.com/findmate/cordova-plugin-jitsi-meet/blob/master/xcode-ios-framework-embed-example.png
+Example of how to select them here: https://github.com/cremfert/cordova-plugin-jitsi-meet/blob/master/xcode-ios-framework-embed-example.png
 
 
 # Usage
