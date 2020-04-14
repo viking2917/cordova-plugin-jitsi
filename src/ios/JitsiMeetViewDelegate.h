@@ -53,7 +53,7 @@
  *
  * The `data` dictionary contains a `url` key with the conference URL.
  */
-- (void)conferenceWillLeave:(NSDictionary *)data;
+- (void)conferenceTerminated:(NSDictionary *)data;
 
 /**
  * Called when loading the main configuration file from the Jitsi Meet

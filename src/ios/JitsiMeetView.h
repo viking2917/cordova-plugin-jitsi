@@ -16,6 +16,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "JitsiMeet.framework/Headers/JitsiMeetConferenceOptions.h"
 
 #import "JitsiMeetViewDelegate.h"
 
@@ -39,10 +40,6 @@
   sourceApplication:(NSString * _Nullable)sourceApplication
          annotation:(id _Nullable)annotation;
 
-- (void)loadURL:(NSURL * _Nullable)url;
-
-- (void)loadURLObject:(NSDictionary * _Nullable)urlObject;
-
-- (void)loadURLString:(NSString * _Nullable)urlString;
+- (void)join:(JitsiMeetConferenceOptions * _Nullable)options;
 
 @end

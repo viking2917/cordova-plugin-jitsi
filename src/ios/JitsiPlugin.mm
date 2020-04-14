@@ -1,5 +1,5 @@
 #import "JitsiPlugin.h"
-
+#import "JitsiMeet.framework/Headers/JitsiMeetConferenceOptions.h"
 
 
 @implementation JitsiPlugin
