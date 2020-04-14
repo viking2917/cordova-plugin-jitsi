@@ -70,9 +70,9 @@ void _onJitsiMeetViewDelegateEvent(NSString *name, NSDictionary *data) {
     [self.commandDelegate sendPluginResult:pluginResult callbackId:commandBack.callbackId];
 }
 
-- (void)conferenceWillLeave:(NSDictionary *)data {
-    _onJitsiMeetViewDelegateEvent(@"CONFERENCE_WILL_LEAVE", data);
-    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"CONFERENCE_WILL_LEAVE"];
+- (void)conferenceTerminated:(NSDictionary *)data {
+    _onJitsiMeetViewDelegateEvent(@"CONFERENCE_TERMINATED", data);
+    pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"CONFERENCE_TERMINATED"];
     [pluginResult setKeepCallbackAsBool:YES];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:commandBack.callbackId];
 }

@@ -18,8 +18,8 @@ Example of how to select them here: https://github.com/cremfert/cordova-plugin-j
 ```
 const roomId = 'your-custom-room-id';
 
-jitsiplugin.loadURL('https://meet.jit.si/' + roomId, roomId, false, function (data) {
-    if (data === "CONFERENCE_WILL_LEAVE") {
+jitsiplugin.join('https://meet.jit.si/', roomId, false, function (data) {
+    if (data === "CONFERENCE_TERMINATED") {
         jitsiplugin.destroy(function (data) {
             // call finished
         }, function (err) {
