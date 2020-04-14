@@ -4,3 +4,8 @@ framework module JitsiMeet {
   export *
   module * { export * }
 }
+
+module JitsiMeet.Swift {
+    header "JitsiMeet-Swift.h"
+    requires objc
+}
