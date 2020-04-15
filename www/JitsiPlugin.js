@@ -1,4 +1,3 @@
-cordova.define("cordova-plugin-jitsi.JitsiPlugin", function(require, exports, module) {
 var exec = require('cordova/exec');
 
 exports.join = function(serverUrl, room, audioOnly, success, error) {
@@ -8,4 +7,3 @@ exports.join = function(serverUrl, room, audioOnly, success, error) {
 exports.destroy = function(success, error) {
     exec(success, error, "JitsiPlugin", "destroy", []);
 };
-});
