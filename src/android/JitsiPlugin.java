@@ -120,8 +120,7 @@ public class JitsiPlugin extends CordovaPlugin implements JitsiMeetActivityInter
         }
         
         JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()
-          .setServerURL(serverUrlObject)
-          .setRoom(roomId)
+          .setRoom(serverUrl + roomId)
           .setSubject(" ")
           .setAudioOnly(audioOnly)
           .setFeatureFlag("chat.enabled", false)
