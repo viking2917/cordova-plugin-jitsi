@@ -49,10 +49,11 @@ public class JitsiPlugin extends CordovaPlugin implements JitsiMeetActivityInter
 
     checkPermission();
 
-    if (action.equals("loadURL")) {
-      String url = args.getString(0);
-      String key = args.getString(1);
-      this.loadURL(url, key, callbackContext);
+    if (action.equals("join")) {
+      String serverUrl = args.getString(0);
+      String roomId = args.getString(1);
+      Boolean audioOnly = args.getBoolean(2);
+      this.join(serverUrl, roomId, audioOnly, callbackContext);
       return true;
     } else if (action.equals("destroy")) {
       this.destroy(callbackContext);
@@ -102,25 +103,27 @@ public class JitsiPlugin extends CordovaPlugin implements JitsiMeetActivityInter
     }
   }
 
-  private void loadURL(final String url, final String key, final CallbackContext callbackContext) {
-    Log.e(TAG, "loadURL called : "+url);
+  private void join(final String serverUrl, final String roomId, final Boolean audioOnly, final CallbackContext callbackContext) {
+    Log.e(TAG, "join called : "+url);
     
     cordova.getActivity().runOnUiThread(new Runnable() {
       public void run() {       
         Context context = cordova.getActivity();
         //view = new JitsiMeetView(context);
       //  Initialize default options for Jitsi Meet conferences.
-        URL serverURL;
+        URL tempServerURL;
         try {          
-            serverURL = new URL(url);
+            tempServerURL = new URL(serverUrl);
         } catch (MalformedURLException e) {
             e.printStackTrace();
             throw new RuntimeException("Invalid server URL!");
         }
         
-        JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()          
-          .setRoom(url)
+        JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()
+          .setServerURL(serverUrl)
+          .setRoom(roomId)
           .setSubject(" ")
+          .setAudioOnly(audioOnly)
           .setFeatureFlag("chat.enabled", false)
           .setFeatureFlag("invite.enabled", false)          
           .setFeatureFlag("calendar.enabled", false)
