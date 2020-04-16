@@ -104,23 +104,23 @@ public class JitsiPlugin extends CordovaPlugin implements JitsiMeetActivityInter
   }
 
   private void join(final String serverUrl, final String roomId, final Boolean audioOnly, final CallbackContext callbackContext) {
-    Log.e(TAG, "join called : "+url);
+    Log.e(TAG, "join called! Server: " + serverUrl + ", room : " + roomId);
     
     cordova.getActivity().runOnUiThread(new Runnable() {
       public void run() {       
         Context context = cordova.getActivity();
         //view = new JitsiMeetView(context);
       //  Initialize default options for Jitsi Meet conferences.
-        URL tempServerURL;
+        URL serverUrlObject;
         try {          
-            tempServerURL = new URL(serverUrl);
+            serverUrlObject = new URL(serverUrl);
         } catch (MalformedURLException e) {
             e.printStackTrace();
             throw new RuntimeException("Invalid server URL!");
         }
         
         JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()
-          .setServerURL(serverUrl)
+          .setServerURL(serverUrlObject)
           .setRoom(roomId)
           .setSubject(" ")
           .setAudioOnly(audioOnly)
