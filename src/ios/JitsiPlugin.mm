@@ -18,6 +18,7 @@ CDVPluginResult *pluginResult = nil;
     JitsiMeetConferenceOptions *options = [JitsiMeetConferenceOptions fromBuilder:^(JitsiMeetConferenceOptionsBuilder *builder) {
         builder.serverURL = [NSURL URLWithString: serverUrl];
         builder.room = room;
+        builder.subject = @" ";
         builder.welcomePageEnabled = NO;
         builder.audioOnly = isAudioOnly;
     }];
