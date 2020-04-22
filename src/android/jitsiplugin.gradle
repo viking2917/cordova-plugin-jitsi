@@ -6,6 +6,12 @@ repositories{
 	maven {
 		url "https://maven.google.com"
 	}
+	configurations.all {
+		resolutionStrategy {
+			force "com.google.android.gms:play-services-basement:15.0.1"
+			force "com.google.android.gms:play-services-tasks:15.0.1"
+		}
+	}
 }
 android {
 	compileSdkVersion 26
