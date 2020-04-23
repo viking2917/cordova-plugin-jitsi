@@ -7,9 +7,9 @@ repositories{
 		url "https://maven.google.com"
 	}
 	configurations.all {
-		resolutionStrategy {
-			force "com.google.android.gms:play-services-basement:17.0.0"
-			force "com.google.android.gms:play-services-tasks:17.0.0"
+		resolutionStrategy {			
+			force "com.google.android.gms:play-services-basement:15.0.1"
+			force "com.google.android.gms:play-services-tasks:15.0.1"
 		}
 	}
 }
