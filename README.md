@@ -6,7 +6,7 @@ This is based on the repo by findmate, but I updated the JitsiMeet SDK and WebRT
 The original repo is here: https://github.com/agorum/cordova-plugin-jitsi
 
 # Installation
-`cordova plugin add https://github.com/seamlink-dev/cordova-plugin-jitsi`
+`cordova plugin add https://github.com/agorum/cordova-plugin-jitsi`
 
 ## iOS Installation
 On iOS/Xcode you will need to manually specify the WebRTC and JitsiMeet frameworks manually to be embedded.
