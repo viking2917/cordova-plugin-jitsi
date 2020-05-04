@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seamlink-dev/cordova-plugin-jitsi.git"
+    "url": "git+https://github.com/agorum/cordova-plugin-jitsi.git"
   },
   "keywords": [
     "ecosystem:cordova",
@@ -21,7 +21,7 @@
   "author": "gaganinvic",
   "license": "Auris",
   "bugs": {
-    "url": "https://github.com/seamlink-dev/cordova-plugin-jitsi/issues"
+    "url": "https://github.com/agorum/cordova-plugin-jitsi/issues"
   },
-  "homepage": "https://github.com/seamlink-dev/cordova-plugin-jitsi#readme"
+  "homepage": "https://github.com/agorum/cordova-plugin-jitsi#readme"
 }
