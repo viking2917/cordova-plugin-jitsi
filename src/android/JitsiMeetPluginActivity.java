@@ -17,17 +17,18 @@ public class JitsiMeetPluginActivity extends JitsiMeetActivity {
         intent.setAction("org.jitsi.meet.CONFERENCE");
         intent.putExtra("JitsiMeetConferenceOptions", options);
         context.startActivity(intent);
+
     }
 
     @Override
     public void onDestroy() {
-        JitsiPluginModel.getInstance().changeState("onConferenceTerminated");
+        JitsiPluginModel.getInstance().changeState("onConferenceDestroyed");
         super.onDestroy();
     }
 
     @Override
     public void finish() {
-        JitsiPluginModel.getInstance().changeState("onConferenceTerminated");
+        JitsiPluginModel.getInstance().changeState("onConferenceFinished");
         super.finish();
     }
 
