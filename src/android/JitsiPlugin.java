@@ -138,7 +138,7 @@ public class JitsiPlugin extends CordovaPlugin
             .setFeatureFlag("calendar.enabled", false)
             .setWelcomePageEnabled(false).build();
 
-        JitsiMeetPluginActivity.launch(cordova.getActivity(), options);
+        JitsiMeetPluginActivity.launchActivity(cordova.getActivity(), options);
       }
     });
   }
@@ -196,8 +196,20 @@ public class JitsiPlugin extends CordovaPlugin
     String m = "";
 
     switch (_conferenceState){
+      case "onConferenceJoined":
+        m = "CONFERENCE_JOINED";
+        break;
+      case "onConferenceWillJoin":
+        m = "CONFERENCE_WILL_JOIN";
+        break;
       case "onConferenceTerminated":
         m = "CONFERENCE_TERMINATED";
+        break;
+      case "onConferenceFinished":
+        m = "CONFERENCE_FINISHED";
+        break;
+      case "onConferenceDestroyed":
+        m = "CONFERENCE_DESTROYED";
         break;
     }
 
