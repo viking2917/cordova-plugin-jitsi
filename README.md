@@ -24,7 +24,7 @@ Example of how to select them here: https://github.com/seamlink-dev/cordova-plug
 </activity>
 ```
 ```
-<config-file target="AndroidManifest.xml" parent="/manifest">
+<config-file target="AndroidManifest.xml" parent="/manifest/application">
     <activity
         android:name="com.cordova.plugin.jitsi.JitsiMeetPluginActivity"
         android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
