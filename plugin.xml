@@ -23,6 +23,16 @@
 			<uses-permission android:name="android.permission.WAKE_LOCK" />
 			<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 		</config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+		    <activity
+			android:name="com.cordova.plugin.jitsi.JitsiMeetPluginActivity"
+			android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+			android:launchMode="singleTask"
+			android:resizeableActivity="true"
+			android:supportsPictureInPicture="true"
+			android:windowSoftInputMode="adjustResize">
+		    </activity>
+		</config-file>
 		<source-file src='src/android/JitsiPlugin.java' target-dir='src/com/cordova/plugin/jitsi/' />
     <source-file src='src/android/JitsiPluginModel.java' target-dir='src/com/cordova/plugin/jitsi/' />
     <source-file src='src/android/JitsiMeetPluginActivity.java' target-dir='src/com/cordova/plugin/jitsi/' />
