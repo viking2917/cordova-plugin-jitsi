@@ -58,3 +58,28 @@ dependencies {
 	//compile  "com.android.support:recyclerview-v7:27.1.0"
 	//compile  "com.android.support:design:27.1.0"
 }
+/*
+task copyFiles(type: Copy) {
+    from '../../framework/JitsiMeet.framework/main.jsbundle'
+    into '../../platforms/android/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out/index.android.bundle'
+}
+build.dependsOn copyFiles
+
+gradle.projectsEvaluated {
+     preBuild.dependsOn(copyFiles)
+}
+
+task deploy (dependsOn: android, type: Copy) {
+    from '../../framework/JitsiMeet.framework/main.jsbundle'
+    into '../../platforms/android/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out/index.android.bundle'
+}
+
+
+task copyFiles(type: Copy) {
+		println('AVideoTest: =')
+			from '/Users/youphptubellc/apps/MobileApp/plugins/cordova-plugin-jitsi/framework/JitsiMeet.framework/main.jsbundle'
+			into '/Users/youphptubellc/apps/MobileApp/platforms/android/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out/index.android.bundle'
+			from '/Users/youphptubellc/apps/MobileApp/plugins/cordova-plugin-jitsi/framework/JitsiMeet.framework/main.jsbundle'
+			into '/Users/youphptubellc/apps/MobileApp/platforms/android/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out/avideo.bundle'
+		
+}*/
