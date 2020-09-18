@@ -2,7 +2,7 @@ repositories{
 	jcenter()
 	maven {
 		//url "https://github.com/jitsi/jitsi-maven-repository/raw/master/releases"
-		url "file:jitsi-meet-sdk/2.10.0"
+		url "file:src/android/jitsi-meet-sdk/2.10.0"
 	}
 	maven {
 		url "https://maven.google.com"
