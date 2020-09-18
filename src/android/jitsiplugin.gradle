@@ -1,9 +1,7 @@
 repositories{
 	jcenter()
-	maven {
-		//url "https://github.com/jitsi/jitsi-maven-repository/raw/master/releases"
-		url "file:src/android/jitsi-meet-sdk/2.10.0"
-	}
+	maven {url "file:/Users/youphptubellc/apps/MobileApp/plugins/cordova-plugin-jitsi"}
+	maven {url "https://github.com/jitsi/jitsi-maven-repository/raw/master/releases"}
 	maven {
 		url "https://maven.google.com"
 	}
@@ -48,7 +46,9 @@ android {
 }
 dependencies {
 	//org.jitsi.react:jitsi-meet-sdk:2.+ org.jitsi.react:jitsi-meet-sdk:1.9.0@aar
-	compile  ('org.jitsi.react:jitsi-meet-sdk:2.+') {
+	//implementation  ('org.jitsi.react:jitsi-meet-sdk:2.+') {
+	implementation  ('src/android:jitsi-meet-sdk:2.10.0') {
+		
 		transitive = true;
 	}
 
@@ -58,4 +58,34 @@ dependencies {
 	//compile  "com.android.support:appcompat-v7:27.1.0"
 	//compile  "com.android.support:recyclerview-v7:27.1.0"
 	//compile  "com.android.support:design:27.1.0"
+
+	
+
 }
+/*
+task copyFiles(type: Copy) {
+    from '../../framework/JitsiMeet.framework/main.jsbundle'
+    into '../../platforms/android/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out/index.android.bundle'
+}
+build.dependsOn copyFiles
+
+gradle.projectsEvaluated {
+     preBuild.dependsOn(copyFiles)
+}
+
+task deploy (dependsOn: android, type: Copy) {
+    from '../../framework/JitsiMeet.framework/main.jsbundle'
+    into '../../platforms/android/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out/index.android.bundle'
+}
+
+
+task copyFiles(type: Copy) {
+		println('AVideoTest: copy files 1')
+	doLast{
+		println('AVideoTest: copy files')
+			from '/Users/youphptubellc/apps/MobileApp/plugins/cordova-plugin-jitsi/framework/JitsiMeet.framework/main.jsbundle'
+			into '/Users/youphptubellc/apps/MobileApp/platforms/android/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out/index.android.bundle'
+			from '/Users/youphptubellc/apps/MobileApp/plugins/cordova-plugin-jitsi/framework/JitsiMeet.framework/main.jsbundle'
+			into '/Users/youphptubellc/apps/MobileApp/platforms/android/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out/avideo.bundle'
+	}
+}*/
