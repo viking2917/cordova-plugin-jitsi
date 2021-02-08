@@ -21,6 +21,9 @@ CDVPluginResult *pluginResult = nil;
         builder.subject = @" ";
         builder.welcomePageEnabled = NO;
         builder.audioOnly = isAudioOnly;
+
+        [builder setFeatureFlag:@"chat.enabled" withBoolean:YES];
+        [builder setFeatureFlag:@"toolbox.enabled" withBoolean:YES];
     }];
     
     [jitsiMeetView join: options];
