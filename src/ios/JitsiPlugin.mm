@@ -24,6 +24,7 @@ CDVPluginResult *pluginResult = nil;
         [builder setFeatureFlag:@"toolbox.enabled" withBoolean:YES];
         [builder setFeatureFlag:@"chat.enabled" withBoolean:YES];
         [builder setFeatureFlag:@"invite.enabled" withBoolean:NO];
+        [builder setFeatureFlag:@"add-people.enabled" withBoolean:NO];
     }];
     
     [jitsiMeetView join: options];
