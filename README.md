@@ -1,6 +1,9 @@
 # cordova-plugin-jitsi
 Cordova plugin for Jitsi Meet React Native SDK. Works with both iOS and Android, and fixes the 64-bit binary dependency issue with Android found in previous versions of this plugin.
 
+(MW: Forked from: YPT-ME/cordova-plugin-jitsi. I have set chat.enabled = true on android, and disabled invited others on ios, to ensure a consistent cross-platform experience)
+
+
 # Summary 
 The original repo is here: https://github.com/agorum/cordova-plugin-jitsi
 
