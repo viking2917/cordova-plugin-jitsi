@@ -133,7 +133,7 @@ public class JitsiPlugin extends CordovaPlugin
             .setRoom(serverUrlObject.getProtocol() + "://" + serverUrlObject.getHost() + "/" +roomId)
             .setSubject(" ")
             .setAudioOnly(audioOnly)
-            .setFeatureFlag("chat.enabled", false)
+            .setFeatureFlag("chat.enabled", true)
             .setFeatureFlag("invite.enabled", false)
             .setFeatureFlag("calendar.enabled", false)
             .setWelcomePageEnabled(false).build();
