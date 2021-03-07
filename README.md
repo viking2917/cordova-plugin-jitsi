@@ -1,8 +1,7 @@
 # cordova-plugin-jitsi
 Cordova plugin for Jitsi Meet React Native SDK. Works with both iOS and Android, and fixes the 64-bit binary dependency issue with Android found in previous versions of this plugin.
 
-(MW: Forked from: YPT-ME/cordova-plugin-jitsi. I have set chat.enabled = true on android, and disabled invited others on ios, to ensure a consistent cross-platform experience)
-
+(MW: Forked from: YPT-ME/cordova-plugin-jitsi. I have set chat.enabled = true on android, and disabled invited others on ios, to ensure a consistent cross-platform experience. iOS users note the installation directions below.)
 
 # Summary 
 The original repo is here: https://github.com/YPT-ME/cordova-plugin-jitsi
@@ -11,6 +10,9 @@ The original repo is here: https://github.com/YPT-ME/cordova-plugin-jitsi
 `cordova plugin add https://github.com/sumeetchhetri/cordova-plugin-jitsi`
 
 ## iOS Installation
+
+(if you get an error about unsupported architectures, be sure to install the contents of 'BuildPhases RunScript.txt' (https://github.com/viking2917/cordova-plugin-jitsi/blob/master/BuildPhases%20%20RunScript.txt) as a Run Script under Build Phases). 
+
 (actually, not sure this is true any more) On iOS/Xcode you will need to manually specify the WebRTC and JitsiMeet frameworks manually to be embedded.
 
 Example of how to select them here: https://github.com/seamlink-dev/cordova-plugin-jitsi-meet/blob/master/xcode-ios-framework-embed-example.png
